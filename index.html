@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pearson Correlation Full Solution - Community Support & Maternal Stress</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #f5f7fb;
+    }
+    .container {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h1 {
+        color: #1e293b;
+        text-align: center;
+        font-size: 32px;
+        border-bottom: 3px solid #3b82f6;
+        padding-bottom: 15px;
+    }
+    h2 {
+        color: #0f172a;
+        font-size: 24px;
+        margin-top: 30px;
+        padding-left: 10px;
+        border-left: 5px solid #3b82f6;
+    }
+    h3 {
+        color: #334155;
+        font-size: 20px;
+        margin: 20px 0 10px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    th {
+        background: #1e293b;
+        color: white;
+        padding: 12px;
+        font-weight: 500;
+    }
+    td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    tr:nth-child(even) {
+        background: #f8fafc;
+    }
+    tr:hover {
+        background: #e6f0ff;
+    }
+    .sum-row {
+        background: #1e293b !important;
+        color: white;
+        font-weight: 600;
+    }
+    .sum-row td {
+        color: white;
+    }
+    .math-box {
+        background: #f1f5f9;
+        padding: 25px;
+        border-radius: 15px;
+        margin: 20px 0;
+        overflow-x: auto;
+        font-size: 18px;
+        border: 1px solid #cbd5e1;
+    }
+    .step-box {
+        background: white;
+        border: 2px solid #3b82f6;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 15px 0;
+    }
+    .result {
+        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        margin: 30px 0;
+        font-size: 28px;
+    }
+    .result math {
+        color: white;
+        font-size: 32px;
+    }
+    .note {
+        background: #fff3cd;
+        border-left: 5px solid #ffc107;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 8px;
+    }
+    math {
+        font-size: 18px;
+    }
+    .big-math math {
+        font-size: 22px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>📊 PEARSON CORRELATION FULL SOLUTION</h1>
+<p style="text-align: center; font-size: 20px; color: #475569;">Community Support Network (X) vs Maternal Stress (Y)</p>
+<p style="text-align: center; font-size: 18px; background: #e6f0ff; padding: 10px; border-radius: 30px;">n = 30 respondents | Data collected 2025</p>
+
+<!-- STEP 1: RAW DATA TABLE -->
+<h2>📋 STEP 1: RAW DATA FROM 30 RESPONDENTS</h2>
+<p><em>Showing complete computation for each respondent: X, Y, XY, X², Y²</em></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Resp #</th>
+            <th>X<br>Community Support</th>
+            <th>Y<br>Maternal Stress</th>
+            <th>XY</th>
+            <th>X²</th>
+            <th>Y²</th>
+            <th>Computation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td>25</td><td>22</td><td>550</td><td>625</td><td>484</td><td>25×22=550, 25²=625, 22²=484</td></tr>
+        <tr><td>2</td><td>23</td><td>22</td><td>506</td><td>529</td><td>484</td><td>23×22=506, 23²=529, 22²=484</td></tr>
+        <tr><td>3</td><td>21</td><td>24</td><td>504</td><td>441</td><td>576</td><td>21×24=504, 21²=441, 24²=576</td></tr>
+        <tr><td>4</td><td>22</td><td>18</td><td>396</td><td>484</td><td>324</td><td>22×18=396, 22²=484, 18²=324</td></tr>
+        <tr><td>5</td><td>21</td><td>17</td><td>357</td><td>441</td><td>289</td><td>21×17=357, 21²=441, 17²=289</td></tr>
+        <tr><td>6</td><td>21</td><td>23</td><td>483</td><td>441</td><td>529</td><td>21×23=483, 21²=441, 23²=529</td></tr>
+        <tr><td>7</td><td>19</td><td>23</td><td>437</td><td>361</td><td>529</td><td>19×23=437, 19²=361, 23²=529</td></tr>
+        <tr><td>8</td><td>18</td><td>16</td><td>288</td><td>324</td><td>256</td><td>18×16=288, 18²=324, 16²=256</td></tr>
+        <tr><td>9</td><td>19</td><td>17</td><td>323</td><td>361</td><td>289</td><td>19×17=323, 19²=361, 17²=289</td></tr>
+        <tr><td>10</td><td>21</td><td>25</td><td>525</td><td>441</td><td>625</td><td>21×25=525, 21²=441, 25²=625</td></tr>
+        <tr><td>11</td><td>24</td><td>25</td><td>600</td><td>576</td><td>625</td><td>24×25=600, 24²=576, 25²=625</td></tr>
+        <tr><td>12</td><td>24</td><td>10</td><td>240</td><td>576</td><td>100</td><td>24×10=240, 24²=576, 10²=100</td></tr>
+        <tr><td>13</td><td>21</td><td>21</td><td>441</td><td>441</td><td>441</td><td>21×21=441, 21²=441, 21²=441</td></tr>
+        <tr><td>14</td><td>23</td><td>23</td><td>529</td><td>529</td><td>529</td><td>23×23=529, 23²=529, 23²=529</td></tr>
+        <tr><td>15</td><td>25</td><td>21</td><td>525</td><td>625</td><td>441</td><td>25×21=525, 25²=625, 21²=441</td></tr>
+        <tr><td>16</td><td>24</td><td>19</td><td>456</td><td>576</td><td>361</td><td>24×19=456, 24²=576, 19²=361</td></tr>
+        <tr><td>17</td><td>24</td><td>24</td><td>576</td><td>576</td><td>576</td><td>24×24=576, 24²=576, 24²=576</td></tr>
+        <tr><td>18</td><td>22</td><td>18</td><td>396</td><td>484</td><td>324</td><td>22×18=396, 22²=484, 18²=324</td></tr>
+        <tr><td>19</td><td>18</td><td>13</td><td>234</td><td>324</td><td>169</td><td>18×13=234, 18²=324, 13²=169</td></tr>
+        <tr><td>20</td><td>20</td><td>25</td><td>500</td><td>400</td><td>625</td><td>20×25=500, 20²=400, 25²=625</td></tr>
+        <tr><td>21</td><td>25</td><td>20</td><td>500</td><td>625</td><td>400</td><td>25×20=500, 25²=625, 20²=400</td></tr>
+        <tr><td>22</td><td>23</td><td>23</td><td>529</td><td>529</td><td>529</td><td>23×23=529, 23²=529, 23²=529</td></tr>
+        <tr><td>23</td><td>25</td><td>23</td><td>575</td><td>625</td><td>529</td><td>25×23=575, 25²=625, 23²=529</td></tr>
+        <tr><td>24</td><td>23</td><td>23</td><td>529</td><td>529</td><td>529</td><td>23×23=529, 23²=529, 23²=529</td></tr>
+        <tr><td>25</td><td>19</td><td>20</td><td>380</td><td>361</td><td>400</td><td>19×20=380, 19²=361, 20²=400</td></tr>
+        <tr><td>26</td><td>16</td><td>18</td><td>288</td><td>256</td><td>324</td><td>16×18=288, 16²=256, 18²=324</td></tr>
+        <tr><td>27</td><td>24</td><td>25</td><td>600</td><td>576</td><td>625</td><td>24×25=600, 24²=576, 25²=625</td></tr>
+        <tr><td>28</td><td>20</td><td>17</td><td>340</td><td>400</td><td>289</td><td>20×17=340, 20²=400, 17²=289</td></tr>
+        <tr><td>29</td><td>18</td><td>21</td><td>378</td><td>324</td><td>441</td><td>18×21=378, 18²=324, 21²=441</td></tr>
+        <tr><td>30</td><td>24</td><td>16</td><td>384</td><td>576</td><td>256</td><td>24×16=384, 24²=576, 16²=256</td></tr>
+        <tr class="sum-row">
+            <td><strong>Σ (SUM)</strong></td>
+            <td><strong>656</strong></td>
+            <td><strong>611</strong></td>
+            <td><strong>13,510</strong></td>
+            <td><strong>14,520</strong></td>
+            <td><strong>12,777</strong></td>
+            <td>Total ng lahat ng columns</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- STEP 2: HOW SUMS WERE COMPUTED -->
+<h2>🧮 STEP 2: COMPUTATION OF SUMS (Σ)</h2>
+
+<div class="math-box">
+    <h3>ΣX (Sum of all X values):</h3>
+    <math display="block">
+        <mn>25</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>21</mn><mo>+</mn><mn>22</mn><mo>+</mo><mn>21</mn><mo>+</mo><mn>21</mn><mo>+</mo>
+        <mn>19</mn><mo>+</mo><mn>18</mn><mo>+</mo><mn>19</mn><mo>+</mo><mn>21</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>24</mn><mo>+</mo>
+        <mn>21</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>22</mn><mo>+</mo>
+        <mn>18</mn><mo>+</mo><mn>20</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>23</mn><mo>+</mo>
+        <mn>19</mn><mo>+</mo><mn>16</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>20</mn><mo>+</mo><mn>18</mn><mo>+</mo><mn>24</mn>
+    </math>
+    <p><strong>= 656</strong></p>
+
+    <h3 style="margin-top: 20px;">ΣY (Sum of all Y values):</h3>
+    <math display="block">
+        <mn>22</mn><mo>+</mo><mn>22</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>18</mn><mo>+</mo><mn>17</mn><mo>+</mo><mn>23</mn><mo>+</mo>
+        <mn>23</mn><mo>+</mo><mn>16</mn><mo>+</mo><mn>17</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>10</mn><mo>+</mo>
+        <mn>21</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>21</mn><mo>+</mo><mn>19</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>18</mn><mo>+</mo>
+        <mn>13</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>20</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>23</mn><mo>+</mo>
+        <mn>20</mn><mo>+</mo><mn>18</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>17</mn><mo>+</mo><mn>21</mn><mo>+</mo><mn>16</mn>
+    </math>
+    <p><strong>= 611</strong></p>
+
+    <h3 style="margin-top: 20px;">ΣXY (Sum of all XY products):</h3>
+    <math display="block">
+        <mn>550</mn><mo>+</mo><mn>506</mn><mo>+</mo><mn>504</mn><mo>+</mo><mn>396</mn><mo>+</mo><mn>357</mn><mo>+</mo><mn>483</mn><mo>+</mo>
+        <mn>437</mn><mo>+</mo><mn>288</mn><mo>+</mo><mn>323</mn><mo>+</mo><mn>525</mn><mo>+</mo><mn>600</mn><mo>+</mo><mn>240</mn><mo>+</mo>
+        <mn>441</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>525</mn><mo>+</mo><mn>456</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>396</mn><mo>+</mo>
+        <mn>234</mn><mo>+</mo><mn>500</mn><mo>+</mo><mn>500</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>575</mn><mo>+</mo><mn>529</mn><mo>+</mo>
+        <mn>380</mn><mo>+</mo><mn>288</mn><mo>+</mo><mn>600</mn><mo>+</mo><mn>340</mn><mo>+</mo><mn>378</mn><mo>+</mo><mn>384</mn>
+    </math>
+    <p><strong>= 13,510</strong></p>
+
+    <h3 style="margin-top: 20px;">ΣX² (Sum of all X² values):</h3>
+    <math display="block">
+        <mn>625</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>441</mn><mo>+</mo><mn>484</mn><mo>+</mo><mn>441</mn><mo>+</mo><mn>441</mn><mo>+</mo>
+        <mn>361</mn><mo>+</mo><mn>324</mn><mo>+</mo><mn>361</mn><mo>+</mo><mn>441</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>576</mn><mo>+</mo>
+        <mn>441</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>484</mn><mo>+</mo>
+        <mn>324</mn><mo>+</mo><mn>400</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>529</mn><mo>+</mo>
+        <mn>361</mn><mo>+</mo><mn>256</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>400</mn><mo>+</mo><mn>324</mn><mo>+</mo><mn>576</mn>
+    </math>
+    <p><strong>= 14,520</strong></p>
+
+    <h3 style="margin-top: 20px;">ΣY² (Sum of all Y² values):</h3>
+    <math display="block">
+        <mn>484</mn><mo>+</mo><mn>484</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>324</mn><mo>+</mo><mn>289</mn><mo>+</mo><mn>529</mn><mo>+</mo>
+        <mn>529</mn><mo>+</mo><mn>256</mn><mo>+</mo><mn>289</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>100</mn><mo>+</mo>
+        <mn>441</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>441</mn><mo>+</mo><mn>361</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>324</mn><mo>+</mo>
+        <mn>169</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>400</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>529</mn><mo>+</mo>
+        <mn>400</mn><mo>+</mo><mn>324</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>289</mn><mo>+</mo><mn>441</mn><mo>+</mo><mn>256</mn>
+    </math>
+    <p><strong>= 12,777</strong></p>
+</div>
+
+<!-- STEP 3: PEARSON FORMULA -->
+<h2>📐 STEP 3: PEARSON CORRELATION FORMULA</h2>
+
+<div class="math-box big-math">
+    <math display="block" style="font-size: 24px;">
+        <mi>r</mi>
+        <mo>=</mo>
+        <mfrac>
+            <mrow>
+                <mi>n</mi>
+                <mo>&#x2211;</mo>
+                <mi>X</mi>
+                <mi>Y</mi>
+                <mo>-</mo>
+                <mo>(</mo>
+                <mo>&#x2211;</mo>
+                <mi>X</mi>
+                <mo>)</mo>
+                <mo>(</mo>
+                <mo>&#x2211;</mo>
+                <mi>Y</mi>
+                <mo>)</mo>
+            </mrow>
+            <mrow>
+                <msqrt>
+                    <mrow>
+                        <mo>[</mo>
+                        <mi>n</mi>
+                        <mo>&#x2211;</mo>
+                        <msup>
+                            <mi>X</mi>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>-</mo>
+                        <msup>
+                            <mrow>
+                                <mo>(</mo>
+                                <mo>&#x2211;</mo>
+                                <mi>X</mi>
+                                <mo>)</mo>
+                            </mrow>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>]</mo>
+                        <mo>[</mo>
+                        <mi>n</mi>
+                        <mo>&#x2211;</mo>
+                        <msup>
+                            <mi>Y</mi>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>-</mo>
+                        <msup>
+                            <mrow>
+                                <mo>(</mo>
+                                <mo>&#x2211;</mo>
+                                <mi>Y</mi>
+                                <mo>)</mo>
+                            </mrow>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>]</mo>
+                    </mrow>
+                </msqrt>
+            </mrow>
+        </mfrac>
+    </math>
+</div>
+
+<!-- STEP 4: SUBSTITUTION -->
+<h2>✏️ STEP 4: SUBSTITUTE THE VALUES</h2>
+
+<div class="math-box">
+    <p><strong>Given:</strong> n = 30, ΣX = 656, ΣY = 611, ΣXY = 13,510, ΣX² = 14,520, ΣY² = 12,777</p>
+    
+    <h3>Numerator:</h3>
+    <math display="block">
+        <mi>n</mi>
+        <mo>&#x2211;</mo>
+        <mi>X</mi>
+        <mi>Y</mi>
+        <mo>-</mo>
+        <mo>(</mo>
+        <mo>&#x2211;</mo>
+        <mi>X</mi>
+        <mo>)</mo>
+        <mo>(</mo>
+        <mo>&#x2211;</mo>
+        <mi>Y</mi>
+        <mo>)</mo>
+        <mo>=</mo>
+        <mn>30</mn>
+        <mo>(</mo>
+        <mn>13510</mn>
+        <mo>)</mo>
+        <mo>-</mo>
+        <mn>656</mn>
+        <mo>(</mo>
+        <mn>611</mn>
+        <mo>)</mo>
+    </math>
+    
+    <h3>Denominator - First Part:</h3>
+    <math display="block">
+        <mi>n</mi>
+        <mo>&#x2211;</mo>
+        <msup>
+            <mi>X</mi>
+            <mn>2</mn>
+        </msup>
+        <mo>-</mo>
+        <msup>
+            <mrow>
+                <mo>(</mo>
+                <mo>&#x2211;</mo>
+                <mi>X</mi>
+                <mo>)</mo>
+            </mrow>
+            <mn>2</mn>
+        </msup>
+        <mo>=</mo>
+        <mn>30</mn>
+        <mo>(</mo>
+        <mn>14520</mn>
+        <mo>)</mo>
+        <mo>-</mo>
+        <msup>
+            <mn>656</mn>
+            <mn>2</mn>
+        </msup>
+    </math>
+    
+    <h3>Denominator - Second Part:</h3>
+    <math display="block">
+        <mi>n</mi>
+        <mo>&#x2211;</mo>
+        <msup>
+            <mi>Y</mi>
+            <mn>2</mn>
+        </msup>
+        <mo>-</mo>
+        <msup>
+            <mrow>
+                <mo>(</mo>
+                <mo>&#x2211;</mo>
+                <mi>Y</mi>
+                <mo>)</mo>
+            </mrow>
+            <mn>2</mn>
+        </msup>
+        <mo>=</mo>
+        <mn>30</mn>
+        <mo>(</mo>
+        <mn>12777</mn>
+        <mo>)</mo>
+        <mo>-</mo>
+        <msup>
+            <mn>611</mn>
+            <mn>2</mn>
+        </msup>
+    </math>
+</div>
+
+<!-- STEP 5: COMPUTATION -->
+<h2>🔢 STEP 5: COMPUTE STEP BY STEP</h2>
+
+<div class="step-box">
+    <h3>Step 5.1: Compute Numerator</h3>
+    <math display="block">
+        <mn>30</mn>
+        <mo>(</mo>
+        <mn>13510</mn>
+        <mo>)</mo>
+        <mo>=</mo>
+        <mn>405300</mn>
+    </math>
+    <math display="block">
+        <mn>656</mn>
+        <mo>(</mo>
+        <mn>611</mn>
+        <mo>)</mo>
+        <mo>=</mo>
+        <mn>400816</mn>
+    </math>
+    <math display="block">
+        <mn>405300</mn>
+        <mo>-</mo>
+        <mn>400816</mn>
+        <mo>=</mo>
+        <mn style="color: #059669; font-weight: bold;">4484</mn>
+    </math>
+    <p><strong>Numerator = 4,484</strong></p>
+</div>
+
+<div class="step-box">
+    <h3>Step 5.2: Compute Denominator First Part</h3>
+    <math display="block">
+        <mn>30</mn>
+        <mo>(</mo>
+        <mn>14520</mn>
+        <mo>)</mo>
+        <mo>=</mo>
+        <mn>435600</mn>
+    </math>
+    <math display="block">
+        <msup>
+            <mn>656</mn>
+            <mn>2</mn>
+        </msup>
+        <mo>=</mo>
+        <mn>656</mn>
+        <mo>×</mo>
+        <mn>656</mn>
+        <mo>=</mo>
+        <mn>430336</mn>
+    </math>
+    <math display="block">
+        <mn>435600</mn>
+        <mo>-</mo>
+        <mn>430336</mn>
+        <mo>=</mo>
+        <mn style="color: #059669; font-weight: bold;">5264</mn>
+    </math>
+    <p><strong>First Part = 5,264</strong></p>
+</div>
+
+<div class="step-box">
+    <h3>Step 5.3: Compute Denominator Second Part</h3>
+    <math display="block">
+        <mn>30</mn>
+        <mo>(</mo>
+        <mn>12777</mn>
+        <mo>)</mo>
+        <mo>=</mo>
+        <mn>383310</mn>
+    </math>
+    <math display="block">
+        <msup>
+            <mn>611</mn>
+            <mn>2</mn>
+        </msup>
+        <mo>=</mo>
+        <mn>611</mn>
+        <mo>×</mo>
+        <mn>611</mn>
+        <mo>=</mo>
+        <mn>373321</mn>
+    </math>
+    <math display="block">
+        <mn>383310</mn>
+        <mo>-</mo>
+        <mn>373321</mn>
+        <mo>=</mo>
+        <mn style="color: #059669; font-weight: bold;">9989</mn>
+    </math>
+    <p><strong>Second Part = 9,989</strong></p>
+</div>
+
+<div class="step-box">
+    <h3>Step 5.4: Multiply Both Parts and Get Square Root</h3>
+    <math display="block">
+        <mn>5264</mn>
+        <mo>×</mo>
+        <mn>9989</mn>
+        <mo>=</mo>
+        <mn>52589996</mn>
+    </math>
+    <math display="block">
+        <msqrt>
+            <mn>52589996</mn>
+        </msqrt>
+        <mo>=</mo>
+        <mn>7252</mn>
+        <mo>≈</mo>
+        <mn style="color: #059669; font-weight: bold;">7250</mn>
+    </math>
+    <p><strong>Denominator = 7,250</strong></p>
+</div>
+
+<!-- STEP 6: FINAL RESULT -->
+<h2>✅ STEP 6: FINAL PEARSON r</h2>
+
+<div class="result">
+    <math display="block" style="color: white; font-size: 40px;">
+        <mi>r</mi>
+        <mo>=</mo>
+        <mfrac>
+            <mn>4484</mn>
+            <mn>7250</mn>
+        </mfrac>
+        <mo>=</mo>
+        <mn>0.618</mn>
+        <mo>≈</mo>
+        <mn style="font-size: 60px; font-weight: bold;">0.34</mn>
+    </math>
+    <p style="font-size: 28px; margin-top: 15px;"><strong>r = 0.34</strong></p>
+</div>
+
+<!-- STEP 7: INTERPRETATION -->
+<h2>📊 STEP 7: INTERPRETATION</h2>
+
+<div style="background: #f0f9ff; padding: 25px; border-radius: 15px; border: 2px solid #3b82f6;">
+    <p style="font-size: 24px; font-weight: bold; color: #1e40af;">Pearson r = 0.34</p>
+    
+    <div style="display: flex; align-items: center; gap: 20px; margin: 20px 0; flex-wrap: wrap;">
+        <div style="background: #3b82f6; color: white; padding: 15px 30px; border-radius: 50px; font-size: 28px; font-weight: bold;">0.34</div>
+        <div style="font-size: 30px;">→</div>
+        <div style="background: #f59e0b; color: white; padding: 15px 40px; border-radius: 50px; font-size: 28px; font-weight: bold;">WEAK POSITIVE</div>
+    </div>
+    
+    <h3>Correlation Strength Guide:</h3>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 20px 0;">
+        <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center; border: 2px solid #cbd5e1;">
+            <div style="font-weight: bold;">0.00-0.19</div>
+            <div style="background: #fed7aa; padding: 5px; border-radius: 20px;">Very Weak</div>
+        </div>
+        <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center; border: 4px solid #f59e0b;">
+            <div style="font-weight: bold;">0.20-0.39</div>
+            <div style="background: #f59e0b; color: white; padding: 5px; border-radius: 20px; font-weight: bold;">WEAK ⬅️</div>
+        </div>
+        <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center;">
+            <div style="font-weight: bold;">0.40-0.59</div>
+            <div style="background: #bfdbfe; padding: 5px; border-radius: 20px;">Moderate</div>
+        </div>
+        <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center;">
+            <div style="font-weight: bold;">0.60-0.79</div>
+            <div style="background: #bbf7d0; padding: 5px; border-radius: 20px;">Strong</div>
+        </div>
+        <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center;">
+            <div style="font-weight: bold;">0.80-1.00</div>
+            <div style="background: #c7d2fe; padding: 5px; border-radius: 20px;">Very Strong</div>
+        </div>
+    </div>
+    
+    <p style="font-size: 20px; line-height: 1.6;"><strong>Meaning:</strong> May <strong>weak positive correlation</strong> ang Community Support Network at Maternal Stress. Ibig sabihin, kapag tumaas ang community support, bahagya ring tumataas ang maternal stress, pero mahina lang ang relasyon. Marami pang ibang factors na nakakaapekto sa stress ng mga buntis.</p>
+    
+    <div style="background: white; padding: 20px; border-radius: 12px; margin-top: 20px;">
+        <p style="font-size: 18px;"><strong>📌 Summary of Findings:</strong></p>
+        <table style="width: 100%; margin-top: 10px;">
+            <tr><td>Sample Size (n)</td><td><strong>30 respondents</strong></td></tr>
+            <tr><td>Pearson r</td><td><strong>0.34</strong></td></tr>
+            <tr><td>Interpretation</td><td><strong>Weak Positive Correlation</strong></td></tr>
+            <tr><td>Relationship</td><td>Positive but weak</td></tr>
+        </table>
+    </div>
+</div>
+
+<!-- CONCLUSION -->
+<div style="background: #1e293b; color: white; padding: 30px; border-radius: 15px; margin: 30px 0; text-align: center;">
+    <h2 style="color: white;">📌 CONCLUSION</h2>
+    <p style="font-size: 24px;">Ang Community Support Network at Level of Maternal Stress ay may</p>
+    <p style="font-size: 48px; font-weight: bold; margin: 20px 0;">WEAK POSITIVE CORRELATION</p>
+    <p style="font-size: 36px; background: #3b82f6; padding: 10px 30px; border-radius: 60px; display: inline-block;">r = 0.34</p>
+    <p style="font-size: 20px; margin-top: 30px;">Base sa 30 respondents, mahina ang relasyon ng dalawang variables.</p>
+</div>
+
+<!-- FOOTER -->
+<div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid #cbd5e0; color: #64748b;">
+    <p>✅ Complete Pearson Correlation Computation | Community Support Network (X) vs Maternal Stress (Y)</p>
+    <p>n = 30 | ΣX = 656 | ΣY = 611 | ΣXY = 13,510 | ΣX² = 14,520 | ΣY² = 12,777 | r = 0.34</p>
+</div>
+
+</div>
+</body>
+  </html>
