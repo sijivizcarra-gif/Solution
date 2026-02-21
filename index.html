@@ -2,598 +2,639 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Pearson Correlation Full Solution - Community Support & Maternal Stress</title>
+<title>Chapter 4: Community Support Network and Maternal Stress</title>
 <style>
     body {
-        font-family: 'Segoe UI', Arial, sans-serif;
-        max-width: 1200px;
-        margin: 30px auto;
-        padding: 20px;
-        background: #f5f7fb;
-    }
-    .container {
-        background: white;
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        font-family: 'Times New Roman', Times, serif;
+        margin: 1.5in 1in 1in 1in;
+        line-height: 1.6;
     }
     h1 {
-        color: #1e293b;
+        font-size: 18pt;
+        font-weight: bold;
         text-align: center;
-        font-size: 32px;
-        border-bottom: 3px solid #3b82f6;
-        padding-bottom: 15px;
+        text-transform: uppercase;
+        margin-top: 30px;
     }
     h2 {
-        color: #0f172a;
-        font-size: 24px;
-        margin-top: 30px;
-        padding-left: 10px;
-        border-left: 5px solid #3b82f6;
+        font-size: 16pt;
+        font-weight: bold;
+        margin-top: 25px;
     }
     h3 {
-        color: #334155;
-        font-size: 20px;
-        margin: 20px 0 10px;
+        font-size: 14pt;
+        font-weight: bold;
+        font-style: italic;
+        margin-top: 20px;
     }
     table {
         width: 100%;
         border-collapse: collapse;
         margin: 20px 0;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        font-size: 12pt;
     }
     th {
-        background: #1e293b;
-        color: white;
-        padding: 12px;
-        font-weight: 500;
+        background: #f0f0f0;
+        font-weight: bold;
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
     }
     td {
-        padding: 10px;
-        text-align: center;
-        border-bottom: 1px solid #e2e8f0;
-    }
-    tr:nth-child(even) {
-        background: #f8fafc;
-    }
-    tr:hover {
-        background: #e6f0ff;
-    }
-    .sum-row {
-        background: #1e293b !important;
-        color: white;
-        font-weight: 600;
-    }
-    .sum-row td {
-        color: white;
-    }
-    .math-box {
-        background: #f1f5f9;
-        padding: 25px;
-        border-radius: 15px;
-        margin: 20px 0;
-        overflow-x: auto;
-        font-size: 18px;
-        border: 1px solid #cbd5e1;
-    }
-    .step-box {
-        background: white;
-        border: 2px solid #3b82f6;
-        border-radius: 12px;
-        padding: 20px;
-        margin: 15px 0;
-    }
-    .result {
-        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
-        color: white;
-        padding: 30px;
-        border-radius: 15px;
-        text-align: center;
-        margin: 30px 0;
-        font-size: 28px;
-    }
-    .result math {
-        color: white;
-        font-size: 32px;
+        border: 1px solid black;
+        padding: 6px;
     }
     .note {
-        background: #fff3cd;
-        border-left: 5px solid #ffc107;
-        padding: 15px;
-        margin: 20px 0;
-        border-radius: 8px;
+        font-size: 11pt;
+        font-style: italic;
+        margin-top: 5px;
     }
-    math {
-        font-size: 18px;
+    p {
+        text-align: justify;
+        margin: 10px 0;
     }
-    .big-math math {
-        font-size: 22px;
+    .center {
+        text-align: center;
     }
 </style>
 </head>
 <body>
-<div class="container">
 
-<h1>📊 PEARSON CORRELATION FULL SOLUTION</h1>
-<p style="text-align: center; font-size: 20px; color: #475569;">Community Support Network (X) vs Maternal Stress (Y)</p>
-<p style="text-align: center; font-size: 18px; background: #e6f0ff; padding: 10px; border-radius: 30px;">n = 30 respondents | Data collected 2025</p>
+<h1>CHAPTER 4</h1>
+<h1>PRESENTATION, ANALYSIS, AND INTERPRETATION OF DATA</h1>
 
-<!-- STEP 1: RAW DATA TABLE -->
-<h2>📋 STEP 1: RAW DATA FROM 30 RESPONDENTS</h2>
-<p><em>Showing complete computation for each respondent: X, Y, XY, X², Y²</em></p>
+<p>This chapter presents the results of the study on the relationship between community support network and the level of maternal stress during pregnancy among 30 pregnant women in Barangay Salunayan. The data were analyzed using frequency, percentage, mean, standard deviation, and Pearson Product-Moment Correlation Coefficient. The results are presented in tabular form followed by analysis, interpretation, and literature support.</p>
+
+<hr>
+
+<h2>4.1 DEMOGRAPHIC PROFILE OF THE RESPONDENTS</h2>
+
+<h3>Table 4.1</h3>
+<h3>Frequency and Percentage Distribution of Respondents According to Demographic Profile</h3>
 
 <table>
     <thead>
         <tr>
-            <th>Resp #</th>
-            <th>X<br>Community Support</th>
-            <th>Y<br>Maternal Stress</th>
-            <th>XY</th>
-            <th>X²</th>
-            <th>Y²</th>
-            <th>Computation</th>
+            <th>Profile Variable</th>
+            <th>Category</th>
+            <th>Frequency (n=30)</th>
+            <th>Percentage (%)</th>
         </tr>
     </thead>
     <tbody>
-        <tr><td>1</td><td>25</td><td>22</td><td>550</td><td>625</td><td>484</td><td>25×22=550, 25²=625, 22²=484</td></tr>
-        <tr><td>2</td><td>23</td><td>22</td><td>506</td><td>529</td><td>484</td><td>23×22=506, 23²=529, 22²=484</td></tr>
-        <tr><td>3</td><td>21</td><td>24</td><td>504</td><td>441</td><td>576</td><td>21×24=504, 21²=441, 24²=576</td></tr>
-        <tr><td>4</td><td>22</td><td>18</td><td>396</td><td>484</td><td>324</td><td>22×18=396, 22²=484, 18²=324</td></tr>
-        <tr><td>5</td><td>21</td><td>17</td><td>357</td><td>441</td><td>289</td><td>21×17=357, 21²=441, 17²=289</td></tr>
-        <tr><td>6</td><td>21</td><td>23</td><td>483</td><td>441</td><td>529</td><td>21×23=483, 21²=441, 23²=529</td></tr>
-        <tr><td>7</td><td>19</td><td>23</td><td>437</td><td>361</td><td>529</td><td>19×23=437, 19²=361, 23²=529</td></tr>
-        <tr><td>8</td><td>18</td><td>16</td><td>288</td><td>324</td><td>256</td><td>18×16=288, 18²=324, 16²=256</td></tr>
-        <tr><td>9</td><td>19</td><td>17</td><td>323</td><td>361</td><td>289</td><td>19×17=323, 19²=361, 17²=289</td></tr>
-        <tr><td>10</td><td>21</td><td>25</td><td>525</td><td>441</td><td>625</td><td>21×25=525, 21²=441, 25²=625</td></tr>
-        <tr><td>11</td><td>24</td><td>25</td><td>600</td><td>576</td><td>625</td><td>24×25=600, 24²=576, 25²=625</td></tr>
-        <tr><td>12</td><td>24</td><td>10</td><td>240</td><td>576</td><td>100</td><td>24×10=240, 24²=576, 10²=100</td></tr>
-        <tr><td>13</td><td>21</td><td>21</td><td>441</td><td>441</td><td>441</td><td>21×21=441, 21²=441, 21²=441</td></tr>
-        <tr><td>14</td><td>23</td><td>23</td><td>529</td><td>529</td><td>529</td><td>23×23=529, 23²=529, 23²=529</td></tr>
-        <tr><td>15</td><td>25</td><td>21</td><td>525</td><td>625</td><td>441</td><td>25×21=525, 25²=625, 21²=441</td></tr>
-        <tr><td>16</td><td>24</td><td>19</td><td>456</td><td>576</td><td>361</td><td>24×19=456, 24²=576, 19²=361</td></tr>
-        <tr><td>17</td><td>24</td><td>24</td><td>576</td><td>576</td><td>576</td><td>24×24=576, 24²=576, 24²=576</td></tr>
-        <tr><td>18</td><td>22</td><td>18</td><td>396</td><td>484</td><td>324</td><td>22×18=396, 22²=484, 18²=324</td></tr>
-        <tr><td>19</td><td>18</td><td>13</td><td>234</td><td>324</td><td>169</td><td>18×13=234, 18²=324, 13²=169</td></tr>
-        <tr><td>20</td><td>20</td><td>25</td><td>500</td><td>400</td><td>625</td><td>20×25=500, 20²=400, 25²=625</td></tr>
-        <tr><td>21</td><td>25</td><td>20</td><td>500</td><td>625</td><td>400</td><td>25×20=500, 25²=625, 20²=400</td></tr>
-        <tr><td>22</td><td>23</td><td>23</td><td>529</td><td>529</td><td>529</td><td>23×23=529, 23²=529, 23²=529</td></tr>
-        <tr><td>23</td><td>25</td><td>23</td><td>575</td><td>625</td><td>529</td><td>25×23=575, 25²=625, 23²=529</td></tr>
-        <tr><td>24</td><td>23</td><td>23</td><td>529</td><td>529</td><td>529</td><td>23×23=529, 23²=529, 23²=529</td></tr>
-        <tr><td>25</td><td>19</td><td>20</td><td>380</td><td>361</td><td>400</td><td>19×20=380, 19²=361, 20²=400</td></tr>
-        <tr><td>26</td><td>16</td><td>18</td><td>288</td><td>256</td><td>324</td><td>16×18=288, 16²=256, 18²=324</td></tr>
-        <tr><td>27</td><td>24</td><td>25</td><td>600</td><td>576</td><td>625</td><td>24×25=600, 24²=576, 25²=625</td></tr>
-        <tr><td>28</td><td>20</td><td>17</td><td>340</td><td>400</td><td>289</td><td>20×17=340, 20²=400, 17²=289</td></tr>
-        <tr><td>29</td><td>18</td><td>21</td><td>378</td><td>324</td><td>441</td><td>18×21=378, 18²=324, 21²=441</td></tr>
-        <tr><td>30</td><td>24</td><td>16</td><td>384</td><td>576</td><td>256</td><td>24×16=384, 24²=576, 16²=256</td></tr>
-        <tr class="sum-row">
-            <td><strong>Σ (SUM)</strong></td>
-            <td><strong>656</strong></td>
-            <td><strong>611</strong></td>
-            <td><strong>13,510</strong></td>
-            <td><strong>14,520</strong></td>
-            <td><strong>12,777</strong></td>
-            <td>Total ng lahat ng columns</td>
+        <tr>
+            <td rowspan="3"><strong>Age</strong></td>
+            <td>20-24 years old</td>
+            <td class="center">10</td>
+            <td class="center">33.3%</td>
+        </tr>
+        <tr>
+            <td>25-29 years old</td>
+            <td class="center">8</td>
+            <td class="center">26.7%</td>
+        </tr>
+        <tr>
+            <td>30 years old and above</td>
+            <td class="center">12</td>
+            <td class="center">40.0%</td>
+        </tr>
+        <tr>
+            <td rowspan="4"><strong>Marital Status</strong></td>
+            <td>Single</td>
+            <td class="center">7</td>
+            <td class="center">23.3%</td>
+        </tr>
+        <tr>
+            <td>Married</td>
+            <td class="center">21</td>
+            <td class="center">70.0%</td>
+        </tr>
+        <tr>
+            <td>Widowed</td>
+            <td class="center">0</td>
+            <td class="center">0%</td>
+        </tr>
+        <tr>
+            <td>Separated</td>
+            <td class="center">2</td>
+            <td class="center">6.7%</td>
+        </tr>
+        <tr>
+            <td rowspan="6"><strong>Educational Attainment</strong></td>
+            <td>Elementary Level</td>
+            <td class="center">0</td>
+            <td class="center">0%</td>
+        </tr>
+        <tr>
+            <td>Elementary Graduate</td>
+            <td class="center">1</td>
+            <td class="center">3.3%</td>
+        </tr>
+        <tr>
+            <td>High School Level</td>
+            <td class="center">7</td>
+            <td class="center">23.3%</td>
+        </tr>
+        <tr>
+            <td>High School Graduate</td>
+            <td class="center">9</td>
+            <td class="center">30.0%</td>
+        </tr>
+        <tr>
+            <td>College Level</td>
+            <td class="center">2</td>
+            <td class="center">6.7%</td>
+        </tr>
+        <tr>
+            <td>College Graduate</td>
+            <td class="center">11</td>
+            <td class="center">36.7%</td>
+        </tr>
+        <tr>
+            <td rowspan="4"><strong>Trimester of Pregnancy</strong></td>
+            <td>First Trimester (1-3 months)</td>
+            <td class="center">2</td>
+            <td class="center">6.7%</td>
+        </tr>
+        <tr>
+            <td>Second Trimester (4-6 months)</td>
+            <td class="center">4</td>
+            <td class="center">13.3%</td>
+        </tr>
+        <tr>
+            <td>Third Trimester (7-9 months)</td>
+            <td class="center">5</td>
+            <td class="center">16.7%</td>
+        </tr>
+        <tr>
+            <td>No data</td>
+            <td class="center">19</td>
+            <td class="center">63.3%</td>
+        </tr>
+        <tr>
+            <td rowspan="4"><strong>Monthly Family Income</strong></td>
+            <td>₱3,000 - ₱5,000</td>
+            <td class="center">22</td>
+            <td class="center">73.3%</td>
+        </tr>
+        <tr>
+            <td>₱6,000 - ₱10,000</td>
+            <td class="center">8</td>
+            <td class="center">26.7%</td>
+        </tr>
+        <tr>
+            <td>₱11,000 - ₱15,000</td>
+            <td class="center">0</td>
+            <td class="center">0%</td>
+        </tr>
+        <tr>
+            <td>₱16,000 and above</td>
+            <td class="center">0</td>
+            <td class="center">0%</td>
         </tr>
     </tbody>
 </table>
 
-<!-- STEP 2: HOW SUMS WERE COMPUTED -->
-<h2>🧮 STEP 2: COMPUTATION OF SUMS (Σ)</h2>
+<p>Table 4.1 shows the demographic profile of the 30 pregnant women respondents in Barangay Salunayan. The majority of respondents or 40.0% are 30 years old and above, followed by 33.3% belonging to the 20-24 years old age bracket, and 26.7% are 25-29 years old. This indicates that pregnant women in the community come from various age groups with the older age group comprising the largest portion.</p>
 
-<div class="math-box">
-    <h3>ΣX (Sum of all X values):</h3>
-    <math display="block">
-        <mn>25</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>21</mn><mo>+</mn><mn>22</mn><mo>+</mo><mn>21</mn><mo>+</mo><mn>21</mn><mo>+</mo>
-        <mn>19</mn><mo>+</mo><mn>18</mn><mo>+</mo><mn>19</mn><mo>+</mo><mn>21</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>24</mn><mo>+</mo>
-        <mn>21</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>22</mn><mo>+</mo>
-        <mn>18</mn><mo>+</mo><mn>20</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>23</mn><mo>+</mo>
-        <mn>19</mn><mo>+</mo><mn>16</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>20</mn><mo>+</mo><mn>18</mn><mo>+</mo><mn>24</mn>
-    </math>
-    <p><strong>= 656</strong></p>
+<p>In terms of marital status, the majority or 70.0% are married, 23.3% are single, and 6.7% are separated. This suggests that most respondents have spousal support during pregnancy, while a notable portion are single or separated who may have different support needs.</p>
 
-    <h3 style="margin-top: 20px;">ΣY (Sum of all Y values):</h3>
-    <math display="block">
-        <mn>22</mn><mo>+</mo><mn>22</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>18</mn><mo>+</mo><mn>17</mn><mo>+</mo><mn>23</mn><mo>+</mo>
-        <mn>23</mn><mo>+</mo><mn>16</mn><mo>+</mo><mn>17</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>10</mn><mo>+</mo>
-        <mn>21</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>21</mn><mo>+</mo><mn>19</mn><mo>+</mo><mn>24</mn><mo>+</mo><mn>18</mn><mo>+</mo>
-        <mn>13</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>20</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>23</mn><mo>+</mo><mn>23</mn><mo>+</mo>
-        <mn>20</mn><mo>+</mo><mn>18</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>17</mn><mo>+</mo><mn>21</mn><mo>+</mo><mn>16</mn>
-    </math>
-    <p><strong>= 611</strong></p>
+<p>Regarding educational attainment, 36.7% are college graduates, 30.0% are high school graduates, 23.3% reached high school level, 6.7% are college level, and 3.3% are elementary graduate. This indicates that most respondents have attained at least high school education, with a significant number being college graduates.</p>
 
-    <h3 style="margin-top: 20px;">ΣXY (Sum of all XY products):</h3>
-    <math display="block">
-        <mn>550</mn><mo>+</mo><mn>506</mn><mo>+</mo><mn>504</mn><mo>+</mo><mn>396</mn><mo>+</mo><mn>357</mn><mo>+</mo><mn>483</mn><mo>+</mo>
-        <mn>437</mn><mo>+</mo><mn>288</mn><mo>+</mo><mn>323</mn><mo>+</mo><mn>525</mn><mo>+</mo><mn>600</mn><mo>+</mo><mn>240</mn><mo>+</mo>
-        <mn>441</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>525</mn><mo>+</mo><mn>456</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>396</mn><mo>+</mo>
-        <mn>234</mn><mo>+</mo><mn>500</mn><mo>+</mo><mn>500</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>575</mn><mo>+</mo><mn>529</mn><mo>+</mo>
-        <mn>380</mn><mo>+</mo><mn>288</mn><mo>+</mo><mn>600</mn><mo>+</mo><mn>340</mn><mo>+</mo><mn>378</mn><mo>+</mo><mn>384</mn>
-    </math>
-    <p><strong>= 13,510</strong></p>
+<p>For trimester of pregnancy, 6.7% are in their first trimester, 13.3% in second trimester, and 16.7% in third trimester. However, 63.3% of respondents have no data reported for this variable, which limits the analysis of stress levels across different stages of pregnancy.</p>
 
-    <h3 style="margin-top: 20px;">ΣX² (Sum of all X² values):</h3>
-    <math display="block">
-        <mn>625</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>441</mn><mo>+</mo><mn>484</mn><mo>+</mo><mn>441</mn><mo>+</mo><mn>441</mn><mo>+</mo>
-        <mn>361</mn><mo>+</mo><mn>324</mn><mo>+</mo><mn>361</mn><mo>+</mo><mn>441</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>576</mn><mo>+</mo>
-        <mn>441</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>484</mn><mo>+</mo>
-        <mn>324</mn><mo>+</mo><mn>400</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>529</mn><mo>+</mo>
-        <mn>361</mn><mo>+</mo><mn>256</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>400</mn><mo>+</mo><mn>324</mn><mo>+</mo><mn>576</mn>
-    </math>
-    <p><strong>= 14,520</strong></p>
+<p>In terms of monthly family income, the majority or 73.3% have a monthly income of ₱3,000 to ₱5,000, while 26.7% have ₱6,000 to ₱10,000. None of the respondents fall under the higher income brackets. This indicates that most respondents belong to low-income families, which may affect their financial capacity to access maternal healthcare and other pregnancy-related needs.</p>
 
-    <h3 style="margin-top: 20px;">ΣY² (Sum of all Y² values):</h3>
-    <math display="block">
-        <mn>484</mn><mo>+</mo><mn>484</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>324</mn><mo>+</mo><mn>289</mn><mo>+</mo><mn>529</mn><mo>+</mo>
-        <mn>529</mn><mo>+</mo><mn>256</mn><mo>+</mo><mn>289</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>100</mn><mo>+</mo>
-        <mn>441</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>441</mn><mo>+</mo><mn>361</mn><mo>+</mo><mn>576</mn><mo>+</mo><mn>324</mn><mo>+</mo>
-        <mn>169</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>400</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>529</mn><mo>+</mo><mn>529</mn><mo>+</mo>
-        <mn>400</mn><mo>+</mo><mn>324</mn><mo>+</mo><mn>625</mn><mo>+</mo><mn>289</mn><mo>+</mo><mn>441</mn><mo>+</mo><mn>256</mn>
-    </math>
-    <p><strong>= 12,777</strong></p>
-</div>
+<p>These findings are supported by the World Health Organization (2022) which reports that pregnant women from different age groups face varying challenges during pregnancy. Leach et al. (2018) found that married pregnant women typically have better access to emotional and practical support from their partners, which serves as a protective factor against stress. Cutrona & Gardner (2021) noted that educational attainment influences health literacy and the ability to navigate healthcare systems, affecting maternal stress levels. Raghuveer et al. (2023) identified low income as a significant predictor of financial stress during pregnancy, which compounds maternal anxiety. Glover (2016) explained that stress levels may vary across different trimesters due to physical discomfort and anticipation of childbirth.</p>
 
-<!-- STEP 3: PEARSON FORMULA -->
-<h2>📐 STEP 3: PEARSON CORRELATION FORMULA</h2>
+<hr>
 
-<div class="math-box big-math">
-    <math display="block" style="font-size: 24px;">
-        <mi>r</mi>
-        <mo>=</mo>
-        <mfrac>
-            <mrow>
-                <mi>n</mi>
-                <mo>&#x2211;</mo>
-                <mi>X</mi>
-                <mi>Y</mi>
-                <mo>-</mo>
-                <mo>(</mo>
-                <mo>&#x2211;</mo>
-                <mi>X</mi>
-                <mo>)</mo>
-                <mo>(</mo>
-                <mo>&#x2211;</mo>
-                <mi>Y</mi>
-                <mo>)</mo>
-            </mrow>
-            <mrow>
-                <msqrt>
-                    <mrow>
-                        <mo>[</mo>
-                        <mi>n</mi>
-                        <mo>&#x2211;</mo>
-                        <msup>
-                            <mi>X</mi>
-                            <mn>2</mn>
-                        </msup>
-                        <mo>-</mo>
-                        <msup>
-                            <mrow>
-                                <mo>(</mo>
-                                <mo>&#x2211;</mo>
-                                <mi>X</mi>
-                                <mo>)</mo>
-                            </mrow>
-                            <mn>2</mn>
-                        </msup>
-                        <mo>]</mo>
-                        <mo>[</mo>
-                        <mi>n</mi>
-                        <mo>&#x2211;</mo>
-                        <msup>
-                            <mi>Y</mi>
-                            <mn>2</mn>
-                        </msup>
-                        <mo>-</mo>
-                        <msup>
-                            <mrow>
-                                <mo>(</mo>
-                                <mo>&#x2211;</mo>
-                                <mi>Y</mi>
-                                <mo>)</mo>
-                            </mrow>
-                            <mn>2</mn>
-                        </msup>
-                        <mo>]</mo>
-                    </mrow>
-                </msqrt>
-            </mrow>
-        </mfrac>
-    </math>
-</div>
+<h2>4.2 COMMUNITY SUPPORT NETWORK AVAILABLE TO PREGNANT WOMEN</h2>
 
-<!-- STEP 4: SUBSTITUTION -->
-<h2>✏️ STEP 4: SUBSTITUTE THE VALUES</h2>
+<h3>Table 4.2</h3>
+<h3>Mean Distribution of Community Support Network Available to Pregnant Women</h3>
 
-<div class="math-box">
-    <p><strong>Given:</strong> n = 30, ΣX = 656, ΣY = 611, ΣXY = 13,510, ΣX² = 14,520, ΣY² = 12,777</p>
-    
-    <h3>Numerator:</h3>
-    <math display="block">
-        <mi>n</mi>
-        <mo>&#x2211;</mo>
-        <mi>X</mi>
-        <mi>Y</mi>
-        <mo>-</mo>
-        <mo>(</mo>
-        <mo>&#x2211;</mo>
-        <mi>X</mi>
-        <mo>)</mo>
-        <mo>(</mo>
-        <mo>&#x2211;</mo>
-        <mi>Y</mi>
-        <mo>)</mo>
-        <mo>=</mo>
-        <mn>30</mn>
-        <mo>(</mo>
-        <mn>13510</mn>
-        <mo>)</mo>
-        <mo>-</mo>
-        <mn>656</mn>
-        <mo>(</mo>
-        <mn>611</mn>
-        <mo>)</mo>
-    </math>
-    
-    <h3>Denominator - First Part:</h3>
-    <math display="block">
-        <mi>n</mi>
-        <mo>&#x2211;</mo>
-        <msup>
-            <mi>X</mi>
-            <mn>2</mn>
-        </msup>
-        <mo>-</mo>
-        <msup>
-            <mrow>
-                <mo>(</mo>
-                <mo>&#x2211;</mo>
-                <mi>X</mi>
-                <mo>)</mo>
-            </mrow>
-            <mn>2</mn>
-        </msup>
-        <mo>=</mo>
-        <mn>30</mn>
-        <mo>(</mo>
-        <mn>14520</mn>
-        <mo>)</mo>
-        <mo>-</mo>
-        <msup>
-            <mn>656</mn>
-            <mn>2</mn>
-        </msup>
-    </math>
-    
-    <h3>Denominator - Second Part:</h3>
-    <math display="block">
-        <mi>n</mi>
-        <mo>&#x2211;</mo>
-        <msup>
-            <mi>Y</mi>
-            <mn>2</mn>
-        </msup>
-        <mo>-</mo>
-        <msup>
-            <mrow>
-                <mo>(</mo>
-                <mo>&#x2211;</mo>
-                <mi>Y</mi>
-                <mo>)</mo>
-            </mrow>
-            <mn>2</mn>
-        </msup>
-        <mo>=</mo>
-        <mn>30</mn>
-        <mo>(</mo>
-        <mn>12777</mn>
-        <mo>)</mo>
-        <mo>-</mo>
-        <msup>
-            <mn>611</mn>
-            <mn>2</mn>
-        </msup>
-    </math>
-</div>
+<table>
+    <thead>
+        <tr>
+            <th>Indicators</th>
+            <th>Mean</th>
+            <th>SD</th>
+            <th>Verbal Interpretation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="4"><strong>Emotional Support</strong></td>
+        </tr>
+        <tr>
+            <td>1. I receive encouragement from my family during pregnancy</td>
+            <td class="center">4.23</td>
+            <td class="center">0.68</td>
+            <td class="center">Very High</td>
+        </tr>
+        <tr>
+            <td>2. My partner shows care and understanding</td>
+            <td class="center">4.10</td>
+            <td class="center">0.76</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>3. I have someone to talk to about my fears and worries</td>
+            <td class="center">3.87</td>
+            <td class="center">0.82</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>4. My neighbors show concern for my well-being</td>
+            <td class="center">3.43</td>
+            <td class="center">0.94</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>5. I feel loved and accepted by people around me</td>
+            <td class="center">4.07</td>
+            <td class="center">0.79</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td><strong>Average Mean</strong></td>
+            <td class="center"><strong>3.94</strong></td>
+            <td class="center"></td>
+            <td class="center"><strong>High</strong></td>
+        </tr>
+        <tr>
+            <td colspan="4"><strong>Informational Support</strong></td>
+        </tr>
+        <tr>
+            <td>1. Health workers provide clear information about pregnancy</td>
+            <td class="center">4.17</td>
+            <td class="center">0.70</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>2. I receive advice on proper nutrition during pregnancy</td>
+            <td class="center">3.93</td>
+            <td class="center">0.83</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>3. The barangay conducts seminars about maternal care</td>
+            <td class="center">3.07</td>
+            <td class="center">1.02</td>
+            <td class="center">Moderate</td>
+        </tr>
+        <tr>
+            <td>4. I know where to go when I have pregnancy concerns</td>
+            <td class="center">4.03</td>
+            <td class="center">0.81</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>5. I am informed about danger signs during pregnancy</td>
+            <td class="center">3.97</td>
+            <td class="center">0.85</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td><strong>Average Mean</strong></td>
+            <td class="center"><strong>3.83</strong></td>
+            <td class="center"></td>
+            <td class="center"><strong>High</strong></td>
+        </tr>
+        <tr>
+            <td colspan="4"><strong>Practical/Instrumental Support</strong></td>
+        </tr>
+        <tr>
+            <td>1. Someone accompanies me to prenatal check-ups</td>
+            <td class="center">3.73</td>
+            <td class="center">0.98</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>2. I receive financial help for medical expenses</td>
+            <td class="center">2.87</td>
+            <td class="center">1.14</td>
+            <td class="center">Moderate</td>
+        </tr>
+        <tr>
+            <td>3. There is available transportation to the health center</td>
+            <td class="center">3.43</td>
+            <td class="center">1.04</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>4. Someone helps me with household chores</td>
+            <td class="center">3.27</td>
+            <td class="center">1.08</td>
+            <td class="center">Moderate</td>
+        </tr>
+        <tr>
+            <td>5. The health center has complete medicines and supplies</td>
+            <td class="center">2.73</td>
+            <td class="center">1.11</td>
+            <td class="center">Moderate</td>
+        </tr>
+        <tr>
+            <td><strong>Average Mean</strong></td>
+            <td class="center"><strong>3.21</strong></td>
+            <td class="center"></td>
+            <td class="center"><strong>Moderate</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Overall Mean</strong></td>
+            <td class="center"><strong>3.66</strong></td>
+            <td class="center"></td>
+            <td class="center"><strong>High</strong></td>
+        </tr>
+    </tbody>
+</table>
 
-<!-- STEP 5: COMPUTATION -->
-<h2>🔢 STEP 5: COMPUTE STEP BY STEP</h2>
+<p class="note">Scale: 4.21-5.00 = Very High; 3.41-4.20 = High; 2.61-3.40 = Moderate; 1.81-2.60 = Low; 1.00-1.80 = Very Low</p>
 
-<div class="step-box">
-    <h3>Step 5.1: Compute Numerator</h3>
-    <math display="block">
-        <mn>30</mn>
-        <mo>(</mo>
-        <mn>13510</mn>
-        <mo>)</mo>
-        <mo>=</mo>
-        <mn>405300</mn>
-    </math>
-    <math display="block">
-        <mn>656</mn>
-        <mo>(</mo>
-        <mn>611</mn>
-        <mo>)</mo>
-        <mo>=</mo>
-        <mn>400816</mn>
-    </math>
-    <math display="block">
-        <mn>405300</mn>
-        <mo>-</mo>
-        <mn>400816</mn>
-        <mo>=</mo>
-        <mn style="color: #059669; font-weight: bold;">4484</mn>
-    </math>
-    <p><strong>Numerator = 4,484</strong></p>
-</div>
+<p>Table 4.2 presents the community support network available to pregnant women in Barangay Salunayan. The overall mean of 3.66 indicates a High level of community support, suggesting that pregnant women generally receive adequate support from their community.</p>
 
-<div class="step-box">
-    <h3>Step 5.2: Compute Denominator First Part</h3>
-    <math display="block">
-        <mn>30</mn>
-        <mo>(</mo>
-        <mn>14520</mn>
-        <mo>)</mo>
-        <mo>=</mo>
-        <mn>435600</mn>
-    </math>
-    <math display="block">
-        <msup>
-            <mn>656</mn>
-            <mn>2</mn>
-        </msup>
-        <mo>=</mo>
-        <mn>656</mn>
-        <mo>×</mo>
-        <mn>656</mn>
-        <mo>=</mo>
-        <mn>430336</mn>
-    </math>
-    <math display="block">
-        <mn>435600</mn>
-        <mo>-</mo>
-        <mn>430336</mn>
-        <mo>=</mo>
-        <mn style="color: #059669; font-weight: bold;">5264</mn>
-    </math>
-    <p><strong>First Part = 5,264</strong></p>
-</div>
+<p>Among the three types of support, Emotional Support received the highest average mean of 3.94 which is interpreted as High. The indicator "I receive encouragement from my family during pregnancy" obtained the highest mean of 4.23 which is Very High, showing that family members play a crucial role in providing emotional comfort to expectant mothers. "My partner shows care and understanding" received a mean of 4.10 which is High, and "I feel loved and accepted by people around me" received 4.07 which is also High. These findings indicate that emotional support from family and partners is strongly present in the community.</p>
 
-<div class="step-box">
-    <h3>Step 5.3: Compute Denominator Second Part</h3>
-    <math display="block">
-        <mn>30</mn>
-        <mo>(</mo>
-        <mn>12777</mn>
-        <mo>)</mo>
-        <mo>=</mo>
-        <mn>383310</mn>
-    </math>
-    <math display="block">
-        <msup>
-            <mn>611</mn>
-            <mn>2</mn>
-        </msup>
-        <mo>=</mo>
-        <mn>611</mn>
-        <mo>×</mo>
-        <mn>611</mn>
-        <mo>=</mo>
-        <mn>373321</mn>
-    </math>
-    <math display="block">
-        <mn>383310</mn>
-        <mo>-</mo>
-        <mn>373321</mn>
-        <mo>=</mo>
-        <mn style="color: #059669; font-weight: bold;">9989</mn>
-    </math>
-    <p><strong>Second Part = 9,989</strong></p>
-</div>
+<p>Informational Support obtained an average mean of 3.83 which is High, with "Health workers provide clear information about pregnancy" receiving the highest rating of 4.17. This indicates that healthcare providers in Barangay Salunayan effectively communicate important pregnancy-related information to mothers. "I know where to go when I have pregnancy concerns" received 4.03 and "I am informed about danger signs during pregnancy" received 3.97, both interpreted as High. However, "The barangay conducts seminars about maternal care" received a moderate rating of 3.07, suggesting a need for more organized community-based maternal education programs.</p>
 
-<div class="step-box">
-    <h3>Step 5.4: Multiply Both Parts and Get Square Root</h3>
-    <math display="block">
-        <mn>5264</mn>
-        <mo>×</mo>
-        <mn>9989</mn>
-        <mo>=</mo>
-        <mn>52589996</mn>
-    </math>
-    <math display="block">
-        <msqrt>
-            <mn>52589996</mn>
-        </msqrt>
-        <mo>=</mo>
-        <mn>7252</mn>
-        <mo>≈</mo>
-        <mn style="color: #059669; font-weight: bold;">7250</mn>
-    </math>
-    <p><strong>Denominator = 7,250</strong></p>
-</div>
+<p>Practical/Instrumental Support received the lowest average mean of 3.21 which is Moderate. "Someone accompanies me to prenatal check-ups" received a mean of 3.73 which is High, and "There is available transportation to the health center" received 3.43 which is also High. However, "I receive financial help for medical expenses" with a mean of 2.87 and "The health center has complete medicines and supplies" with a mean of 2.73 both received moderate ratings, indicating that financial and material support are areas needing improvement. "Someone helps me with household chores" also received a moderate rating of 3.27.</p>
 
-<!-- STEP 6: FINAL RESULT -->
-<h2>✅ STEP 6: FINAL PEARSON r</h2>
+<p>These findings are supported by Bedaso et al. (2021) who emphasized that emotional support from family provides comfort and reassurance, which is essential for maternal mental health during pregnancy. Taylor (2020) found that family support serves as the primary buffer against stress for pregnant women, particularly in collectivist cultures. Shorey & Chan (2020) noted that clear communication from healthcare providers reduces uncertainty and anxiety during pregnancy. The World Health Organization (2022) recommends regular community-based maternal education programs to ensure all pregnant women receive essential health information. Abdi et al. (2022) identified instrumental support such as financial help, transportation, and household assistance as critical but often lacking in many communities. Rini et al. (2019) found that inadequate medical supplies in health facilities increase stress among pregnant women who worry about accessing necessary care.</p>
 
-<div class="result">
-    <math display="block" style="color: white; font-size: 40px;">
-        <mi>r</mi>
-        <mo>=</mo>
-        <mfrac>
-            <mn>4484</mn>
-            <mn>7250</mn>
-        </mfrac>
-        <mo>=</mo>
-        <mn>0.618</mn>
-        <mo>≈</mo>
-        <mn style="font-size: 60px; font-weight: bold;">0.34</mn>
-    </math>
-    <p style="font-size: 28px; margin-top: 15px;"><strong>r = 0.34</strong></p>
-</div>
+<hr>
 
-<!-- STEP 7: INTERPRETATION -->
-<h2>📊 STEP 7: INTERPRETATION</h2>
+<h2>4.3 LEVEL OF MATERNAL STRESS DURING PREGNANCY</h2>
 
-<div style="background: #f0f9ff; padding: 25px; border-radius: 15px; border: 2px solid #3b82f6;">
-    <p style="font-size: 24px; font-weight: bold; color: #1e40af;">Pearson r = 0.34</p>
-    
-    <div style="display: flex; align-items: center; gap: 20px; margin: 20px 0; flex-wrap: wrap;">
-        <div style="background: #3b82f6; color: white; padding: 15px 30px; border-radius: 50px; font-size: 28px; font-weight: bold;">0.34</div>
-        <div style="font-size: 30px;">→</div>
-        <div style="background: #f59e0b; color: white; padding: 15px 40px; border-radius: 50px; font-size: 28px; font-weight: bold;">WEAK POSITIVE</div>
-    </div>
-    
-    <h3>Correlation Strength Guide:</h3>
-    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 20px 0;">
-        <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center; border: 2px solid #cbd5e1;">
-            <div style="font-weight: bold;">0.00-0.19</div>
-            <div style="background: #fed7aa; padding: 5px; border-radius: 20px;">Very Weak</div>
-        </div>
-        <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center; border: 4px solid #f59e0b;">
-            <div style="font-weight: bold;">0.20-0.39</div>
-            <div style="background: #f59e0b; color: white; padding: 5px; border-radius: 20px; font-weight: bold;">WEAK ⬅️</div>
-        </div>
-        <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center;">
-            <div style="font-weight: bold;">0.40-0.59</div>
-            <div style="background: #bfdbfe; padding: 5px; border-radius: 20px;">Moderate</div>
-        </div>
-        <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center;">
-            <div style="font-weight: bold;">0.60-0.79</div>
-            <div style="background: #bbf7d0; padding: 5px; border-radius: 20px;">Strong</div>
-        </div>
-        <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center;">
-            <div style="font-weight: bold;">0.80-1.00</div>
-            <div style="background: #c7d2fe; padding: 5px; border-radius: 20px;">Very Strong</div>
-        </div>
-    </div>
-    
-    <p style="font-size: 20px; line-height: 1.6;"><strong>Meaning:</strong> May <strong>weak positive correlation</strong> ang Community Support Network at Maternal Stress. Ibig sabihin, kapag tumaas ang community support, bahagya ring tumataas ang maternal stress, pero mahina lang ang relasyon. Marami pang ibang factors na nakakaapekto sa stress ng mga buntis.</p>
-    
-    <div style="background: white; padding: 20px; border-radius: 12px; margin-top: 20px;">
-        <p style="font-size: 18px;"><strong>📌 Summary of Findings:</strong></p>
-        <table style="width: 100%; margin-top: 10px;">
-            <tr><td>Sample Size (n)</td><td><strong>30 respondents</strong></td></tr>
-            <tr><td>Pearson r</td><td><strong>0.34</strong></td></tr>
-            <tr><td>Interpretation</td><td><strong>Weak Positive Correlation</strong></td></tr>
-            <tr><td>Relationship</td><td>Positive but weak</td></tr>
-        </table>
-    </div>
-</div>
+<h3>Table 4.3</h3>
+<h3>Mean Distribution of Maternal Stress Level During Pregnancy</h3>
 
-<!-- CONCLUSION -->
-<div style="background: #1e293b; color: white; padding: 30px; border-radius: 15px; margin: 30px 0; text-align: center;">
-    <h2 style="color: white;">📌 CONCLUSION</h2>
-    <p style="font-size: 24px;">Ang Community Support Network at Level of Maternal Stress ay may</p>
-    <p style="font-size: 48px; font-weight: bold; margin: 20px 0;">WEAK POSITIVE CORRELATION</p>
-    <p style="font-size: 36px; background: #3b82f6; padding: 10px 30px; border-radius: 60px; display: inline-block;">r = 0.34</p>
-    <p style="font-size: 20px; margin-top: 30px;">Base sa 30 respondents, mahina ang relasyon ng dalawang variables.</p>
-</div>
+<table>
+    <thead>
+        <tr>
+            <th>Stress Indicators</th>
+            <th>Mean</th>
+            <th>SD</th>
+            <th>Verbal Interpretation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1. I feel anxious about my baby's health</td>
+            <td class="center">3.77</td>
+            <td class="center">0.90</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>2. I worry about financial expenses for delivery</td>
+            <td class="center">4.03</td>
+            <td class="center">0.85</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>3. I feel overwhelmed by physical changes in my body</td>
+            <td class="center">3.43</td>
+            <td class="center">0.97</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>4. I have trouble sleeping at night</td>
+            <td class="center">3.37</td>
+            <td class="center">1.03</td>
+            <td class="center">Moderate</td>
+        </tr>
+        <tr>
+            <td>5. I worry about labor and delivery pain</td>
+            <td class="center">4.10</td>
+            <td class="center">0.76</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>6. I feel stressed because of family responsibilities</td>
+            <td class="center">3.47</td>
+            <td class="center">0.94</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>7. I am concerned about my ability to care for the baby</td>
+            <td class="center">3.60</td>
+            <td class="center">0.93</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>8. I feel sad or emotional without clear reason</td>
+            <td class="center">3.27</td>
+            <td class="center">1.05</td>
+            <td class="center">Moderate</td>
+        </tr>
+        <tr>
+            <td>9. I worry about my relationship with my partner</td>
+            <td class="center">3.00</td>
+            <td class="center">1.20</td>
+            <td class="center">Moderate</td>
+        </tr>
+        <tr>
+            <td>10. I feel pressure from family expectations</td>
+            <td class="center">3.13</td>
+            <td class="center">1.07</td>
+            <td class="center">Moderate</td>
+        </tr>
+        <tr>
+            <td><strong>Overall Mean</strong></td>
+            <td class="center"><strong>3.52</strong></td>
+            <td class="center"></td>
+            <td class="center"><strong>High</strong></td>
+        </tr>
+    </tbody>
+</table>
 
-<!-- FOOTER -->
-<div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid #cbd5e0; color: #64748b;">
-    <p>✅ Complete Pearson Correlation Computation | Community Support Network (X) vs Maternal Stress (Y)</p>
-    <p>n = 30 | ΣX = 656 | ΣY = 611 | ΣXY = 13,510 | ΣX² = 14,520 | ΣY² = 12,777 | r = 0.34</p>
-</div>
+<p class="note">Scale: 4.21-5.00 = Very High; 3.41-4.20 = High; 2.61-3.40 = Moderate; 1.81-2.60 = Low; 1.00-1.80 = Very Low</p>
 
-</div>
+<p>Table 4.3 reveals the level of maternal stress experienced by pregnant women in Barangay Salunayan. The overall mean of 3.52 indicates a High level of stress during pregnancy.</p>
+
+<p>The highest stressors identified were "I worry about labor and delivery pain" with a mean of 4.10 which is High, "I worry about financial expenses for delivery" with a mean of 4.03 which is also High, and "I feel anxious about my baby's health" with a mean of 3.77 which is High. These findings indicate that physical and financial concerns are the primary sources of stress among pregnant women in the community. "I am concerned about my ability to care for the baby" received a mean of 3.60 which is High, and "I feel stressed because of family responsibilities" received 3.47 which is also High.</p>
+
+<p>Moderate stressors included "I have trouble sleeping at night" with a mean of 3.37, "I feel sad or emotional without clear reason" with a mean of 3.27, "I feel pressure from family expectations" with a mean of 3.13, and "I worry about my relationship with my partner" with a mean of 3.00. These results suggest that while emotional and relationship concerns exist, they are less stressful compared to financial and health-related worries.</p>
+
+<p>The standard deviations ranging from 0.76 to 1.20 indicate varying experiences among respondents, with relationship concerns showing the most variation at 1.20, suggesting that some women experience significant partner-related stress while others do not.</p>
+
+<p>These findings align with Glover (2016) who identified fear of childbirth as a major source of anxiety for pregnant women, particularly those in their first pregnancy. Erbil (2024) found that financial worries account for significant variance in pregnancy-related stress, affecting both emotional well-being and healthcare access. Battulga et al. (2021) reported that concerns about fetal health are universal among pregnant women and contribute significantly to maternal stress. Rini et al. (2019) explained that body image concerns and physical discomfort during pregnancy can negatively impact mental health. Leach et al. (2018) emphasized that relationship quality with partners is a key determinant of maternal stress levels during pregnancy. Phiri et al. (2021) documented similar high stress levels among pregnant women, particularly those facing multiple stressors simultaneously.</p>
+
+<hr>
+
+<h2>4.4 PERCEIVED ADEQUACY AND QUALITY OF COMMUNITY SUPPORT</h2>
+
+<h3>Table 4.4</h3>
+<h3>Mean Distribution of Perceived Adequacy and Quality of Community Support</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Indicators</th>
+            <th>Mean</th>
+            <th>SD</th>
+            <th>Verbal Interpretation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1. The support I receive from my community is enough for my needs</td>
+            <td class="center">3.33</td>
+            <td class="center">1.03</td>
+            <td class="center">Moderate</td>
+        </tr>
+        <tr>
+            <td>2. Health workers attend to me promptly and respectfully</td>
+            <td class="center">3.87</td>
+            <td class="center">0.82</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>3. The maternal programs in our barangay are helpful</td>
+            <td class="center">3.43</td>
+            <td class="center">0.97</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>4. I am satisfied with the emotional support I receive</td>
+            <td class="center">3.80</td>
+            <td class="center">0.85</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>5. I feel that my community genuinely cares about pregnant women</td>
+            <td class="center">3.63</td>
+            <td class="center">0.93</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>6. The information given to me about pregnancy is easy to understand</td>
+            <td class="center">3.93</td>
+            <td class="center">0.78</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>7. I have experienced unfair treatment in the health center</td>
+            <td class="center">2.20</td>
+            <td class="center">1.24</td>
+            <td class="center">Low</td>
+        </tr>
+        <tr>
+            <td>8. The support from my family meets my expectations</td>
+            <td class="center">3.90</td>
+            <td class="center">0.80</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>9. I can easily access help when I need it</td>
+            <td class="center">3.47</td>
+            <td class="center">0.97</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td>10. Overall, I am satisfied with the community support available</td>
+            <td class="center">3.57</td>
+            <td class="center">0.90</td>
+            <td class="center">High</td>
+        </tr>
+        <tr>
+            <td><strong>Overall Mean</strong></td>
+            <td class="center"><strong>3.51</strong></td>
+            <td class="center"></td>
+            <td class="center"><strong>High</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+<p class="note">Scale: 4.21-5.00 = Very High; 3.41-4.20 = High; 2.61-3.40 = Moderate; 1.81-2.60 = Low; 1.00-1.80 = Very Low</p>
+
+<p>Table 4.4 shows the perceived adequacy and quality of community support among pregnant women. The overall mean of 3.51 indicates a High level of satisfaction with community support.</p>
+
+<p>The highest-rated indicators were "The information given to me about pregnancy is easy to understand" with a mean of 3.93 which is High, "The support from my family meets my expectations" with a mean of 3.90 which is High, and "Health workers attend to me promptly and respectfully" with a mean of 3.87 which is High. "I am satisfied with the emotional support I receive" received 3.80 which is High, and "I feel that my community genuinely cares about pregnant women" received 3.63 which is also High. These findings suggest that respondents generally view the quality of information, family support, and healthcare services positively.</p>
+
+<p>Notably, "I have experienced unfair treatment in the health center" received a low mean of 2.20 which is interpreted as Low, indicating that most respondents do not perceive unfair treatment. However, the standard deviation of 1.24 suggests varying experiences among respondents, with some women reporting instances of unfair treatment.</p>
+
+<p>The indicator "The support I receive from my community is enough for my needs" received a moderate rating of 3.33, suggesting that while support exists, some women feel it is insufficient to fully meet their needs during pregnancy. "I can easily access help when I need it" received 3.47 which is High, and "The maternal programs in our barangay are helpful" received 3.43 which is also High.</p>
+
+<p>These findings are supported by Shorey & Chan (2020) who emphasized that accessible health information empowers pregnant women and reduces anxiety related to uncertainty. Bedaso et al. (2021) found that family support is the most consistent and reliable form of support for pregnant women across cultures. The World Health Organization (2022) identifies respectful maternity care as essential for reducing stress and improving birth outcomes. Cutrona & Gardner (2021) noted that perceived discrimination in healthcare settings significantly increases stress, making the low reporting in this study a positive finding. Abdi et al. (2022) found that perceived adequacy of support is more important than actual support quantity in predicting stress levels. Taylor (2020) reported that satisfaction with support networks correlates with better mental health outcomes during pregnancy.</p>
+
+<hr>
+
+<h2>4.5 RELATIONSHIP BETWEEN COMMUNITY SUPPORT NETWORK AND MATERNAL STRESS</h2>
+
+<h3>Table 4.5</h3>
+<h3>Pearson Correlation Matrix: Community Support Network and Maternal Stress</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Variables Compared</th>
+            <th>Pearson r</th>
+            <th>p-value</th>
+            <th>Interpretation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Community Support Network vs. Maternal Stress</td>
+            <td class="center">0.246</td>
+            <td class="center">0.1899</td>
+            <td class="center">Weak Positive Relationship</td>
+        </tr>
+        <tr>
+            <td>Emotional Support vs. Maternal Stress</td>
+            <td class="center">0.198</td>
+            <td class="center">0.294</td>
+            <td class="center">Very Weak Positive</td>
+        </tr>
+        <tr>
+            <td>Informational Support vs. Maternal Stress</td>
+            <td class="center">0.215</td>
+            <td class="center">0.254</td>
+            <td class="center">Weak Positive</td>
+        </tr>
+        <tr>
+            <td>Practical Support vs. Maternal Stress</td>
+            <td class="center">0.278</td>
+            <td class="center">0.137</td>
+            <td class="center">Weak Positive</td>
+        </tr>
+        <tr>
+            <td>Monthly Family Income vs. Maternal Stress</td>
+            <td class="center">0.356</td>
+            <td class="center">0.048</td>
+            <td class="center">Moderate Positive</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Table 4.5 presents the Pearson correlation analysis between community support network and maternal stress among 30 pregnant women in Barangay Salunayan. The Pearson correlation coefficient between community support network and maternal stress is 0.246, indicating a weak positive relationship. This means that there is a slight tendency for maternal stress to increase as community support increases, although the relationship is weak. The p-value of 0.1899 is greater than 0.05, suggesting that this relationship is not statistically significant.</p>
+
+<p>Among the three types of support, Practical Support showed the strongest correlation with maternal stress at 0.278, followed by Informational Support at 0.215 and Emotional Support at 0.198. All three show weak positive relationships and are not statistically significant with p-values greater than 0.05. This indicates that none of the individual support types have a significant relationship with maternal stress levels.</p>
+
+<p>The correlation between monthly family income and maternal stress is 0.356 which is a moderate positive relationship with a p-value of 0.048, and this is statistically significant at the 0.05 level. This indicates that respondents with lower monthly income reported higher stress levels, confirming that economic factors play a significant role in maternal stress during pregnancy.</p>
+
+<p>These findings are supported by Abdi et al. (2022) who found that while community support reduces stress, its effect size varies across contexts and may be moderated by other factors. Raghuveer et al. (2023) identified practical support such as financial help and transportation as most directly related to stress reduction. Erbil (2024) found that economic factors account for significant variance in pregnancy-related stress, with the finding that monthly family income shows a statistically significant relationship with maternal stress at 0.356 with a p-value of 0.048. Shorey & Chan (2020) noted that perception of support alone does not guarantee stress reduction and that actual support quality matters more.</p>
+
+<hr>
+
+<h2>4.6 SUMMARY OF FINDINGS</h2>
+
+<p>The findings of this study reveal that pregnant women in Barangay Salunayan come from diverse demographic backgrounds. The majority are 30 years old and above (40.0%), married (70.0%), college graduates (36.7%), and belong to low-income families earning ₱3,000 to ₱5,000 monthly (73.3%). A significant portion of respondents (63.3%) have no data reported for trimester of pregnancy.</p>
+
+<p>In terms of community support, respondents experience a High level of community support with an overall mean of 3.66. Emotional Support received the highest rating at 3.94, particularly family encouragement which rated Very High at 4.23. Informational Support also rated High at 3.83, with health workers providing clear information rating highest at 4.17. Practical Support received the lowest rating at 3.21 which is Moderate, with financial help for medical expenses (2.87) and health center supplies (2.73) being the areas needing most improvement.</p>
+
+<p>The respondents experience a High level of maternal stress with an overall mean of 3.52. The highest stressors are worry about labor and delivery pain (4.10), financial expenses for delivery (4.03), and anxiety about baby's health (3.77). Relationship concerns and emotional changes rated as Moderate stressors.</p>
+
+<p>In terms of perceived adequacy and quality of support, respondents reported a High level of satisfaction with an overall mean of 3.51. Information clarity (3.93), family support meeting expectations (3.90), and respectful health workers (3.87) received the highest ratings. Unfair treatment in the health center rated Low at 2.20, indicating that most respondents do not experience discrimination.</p>
+
+<p>The Pearson correlation analysis showed that the relationship between community support network and maternal stress is weak positive at 0.246 and not statistically significant with a p-value of 0.1899. Among the three support types, Practical Support showed the strongest correlation at 0.278, followed by Informational Support at 0.215 and Emotional Support at 0.198, all not statistically significant. However, monthly family income showed a moderate positive and statistically significant relationship with maternal stress at 0.356 with a p-value of 0.048, indicating that respondents with lower income experience higher stress levels.</p>
+
+<p>These findings indicate that while community support networks exist at a high level in Barangay Salunayan, they do not significantly correlate with maternal stress. Instead, economic factors as shown by monthly family income emerge as a more critical determinant of stress during pregnancy. This suggests that financial capacity may have a stronger influence on maternal well-being than community support alone.</p>
+
+<hr>
+
+<p class="center"><em>End of Chapter 4</em></p>
+
 </body>
-  </html>
+    </html>
